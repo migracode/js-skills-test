@@ -1,10 +1,10 @@
 {
-  "name": "migra-dev-test",
+  "name": "js-skills-test",
   "version": "1.0.0",
   "scripts": {
-    "test": "node --test ./tests/*.test.*"
+    "test": "node --test"
   },
-  "author": "Italo Fernandes",
+  "author": "migracode",
   "license": "ISC",
   "description": "",
   "type": "module"

@@ -6,5 +6,11 @@ Por exemplo, para a string "banana", o resultado deve ser { b: 1, a: 3, n: 2 }.
 */
 
 export function countChars(str) {
-  return;
+  const count = {};
+
+  for (const char of str) {
+    count[char] = (count[char] || 0) + 1;
+  }
+
+  return count;
 }

@@ -6,5 +6,5 @@ Por exemplo, dado o array [0, 1, false, 2, "", 3], o retorno deve ser [1, 2, 3].
 */
 
 export function removeFalsy(arr) {
-  return;
+  return arr.filter(Boolean);
 }

@@ -24,6 +24,10 @@ function fetchData(id) {
 
 const ids = [1, 2, 3, 4, 5];
 
-ids.forEach(async (id) => {
-  await fetchData(id);
-});
+async function fetchAllData() {
+  for (const id of ids) {
+    await fetchData(id);
+  }
+}
+
+fetchAllData();

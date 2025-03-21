@@ -6,5 +6,8 @@ Por exemplo, dado o número 543, o retorno deve ser 5 + 4 + 3 = 12.
 */
 
 export function sumDigits(num) {
-  return;
+  return num
+    .toString()
+    .split("")
+    .reduce((acc, digit) => acc + +digit, 0);
 }
