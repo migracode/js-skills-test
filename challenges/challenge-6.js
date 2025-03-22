@@ -8,5 +8,13 @@ o retorno deve ser false, pois há sobreposição.
 */
 
 export function canBookReservation(existingReservations, newReservation) {
-  return;
+  const [start, end] = existingReservations;
+  if (
+    (newReservation[1] <= start[0]) ||
+    (newReservation[0] >= end[1]) ||
+    (newReservation[0] >= start[1] && newReservation[1] <= end[0])
+  ) {
+    return true;
+  }
+  return false;
 }
