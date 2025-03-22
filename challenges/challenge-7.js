@@ -9,5 +9,13 @@ Caso o valor a ser sacado não possa ser atendido com as cédulas disponíveis, 
 */
 
 export function atmWithdrawal(amount) {
-  return;
+  const notes = [100, 50, 20, 10, 5];
+  const result = {};
+  for (let note of notes) {
+    if (amount >= note) {
+      result[note] = Math.floor(amount / note);
+      amount -= result[note] * note;
+    }
+  }
+  return amount === 0 ? result : "Erro: valor não pode ser sacado.";
 }
